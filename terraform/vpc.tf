@@ -17,8 +17,8 @@ module "vpc_r1" {
   azs                = ["${local.region1}a", "${local.region1}b", "${local.region1}c", "${local.region1}d"]
   private_subnets    = [local.private_subnet1, local.private_subnet2, local.private_subnet3]
   public_subnets     = [local.public_subnet1]
-  create_vpc         = true
-  enable_nat_gateway = true
+  create_vpc         = false
+  enable_nat_gateway = false
   enable_vpn_gateway = false
   region             = local.region1
 }
